@@ -202,7 +202,12 @@ const SocialButton = ({ social, printForLabour, theCampaignHouse }) => {
                   layout="responsive"
                 />
               </StyledLogo>
-              <a style={{ color: "#1A382C" }} href={theCampaignHouse}>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                style={{ color: "#1A382C" }}
+                href={theCampaignHouse}
+              >
                 The Campaign House
               </a>
             </div>
@@ -219,7 +224,12 @@ const SocialButton = ({ social, printForLabour, theCampaignHouse }) => {
                 />
               </StyledLogo>
 
-              <a style={{ color: "#e4003b" }} href={printForLabour}>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                style={{ color: "#e4003b" }}
+                href={printForLabour}
+              >
                 Print For Labour
               </a>
             </div>
