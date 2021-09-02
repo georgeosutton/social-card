@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import styled from "styled-components";
 import { AnimateSharedLayout, motion } from "framer-motion";
@@ -11,6 +11,14 @@ import Link from "next/link";
 import SocialButton from "../components/SocialButton";
 
 const Home = () => {
+  const myRef = useRef(null);
+
+  const executeScroll = () => myRef.current.scrollIntoView();
+
+  useEffect(() => {
+    executeScroll();
+  }, []);
+
   return (
     <StyledSocial layout>
       <Head>
@@ -22,6 +30,7 @@ const Home = () => {
       </Head>
       <AnimateSharedLayout>
         <StyledCard layout>
+          <div ref={myRef} className="scroll"></div>
           <motion.h1 layout>Get in touch...</motion.h1>
 
           <StyledButtons layout>
@@ -126,6 +135,13 @@ const StyledCard = styled(motion.div)`
         font-size: 3.2rem;
         margin: 2rem 0;
       }
+    }
+  }
+  .scroll {
+    top: 3rem;
+    position: absolute;
+    @media (max-width: 600px) {
+      top: 0;
     }
   }
 `;
