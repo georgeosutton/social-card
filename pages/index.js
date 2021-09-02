@@ -10,7 +10,7 @@ import Link from "next/link";
 
 import SocialButton from "../components/SocialButton";
 
-export default function Home() {
+const Home = () => {
   return (
     <StyledSocial layout>
       <AnimateSharedLayout>
@@ -50,7 +50,7 @@ export default function Home() {
       </AnimateSharedLayout>
     </StyledSocial>
   );
-}
+};
 const StyledLayout = styled.div`
   display: flex;
   flex-direction: column;
@@ -103,3 +103,5 @@ const StyledButtons = styled.div`
 Home.getLayout = function getLayout(Home) {
   return <StyledLayout>{Home}</StyledLayout>;
 };
+
+export default Home;
