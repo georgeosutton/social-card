@@ -112,6 +112,7 @@ const StyledCard = styled(motion.div)`
   @media (max-width: 600px) {
     width: 90%;
     margin: 2rem 0;
+    box-shadow: none;
   }
   h1 {
     margin: 3rem 0;
@@ -121,6 +122,10 @@ const StyledCard = styled(motion.div)`
     @media (max-width: 600px) {
       font-size: 3.8rem;
       margin: 2rem 0;
+      @media (max-width: 320px) {
+        font-size: 3.2rem;
+        margin: 2rem 0;
+      }
     }
   }
 `;
@@ -137,7 +142,8 @@ const StyledFooter = styled.footer`
   margin: 0.5rem 0;
   padding: 2rem 0;
   a {
-    margin: 0.75rem 0;
+    text-align: center;
+    margin: 1rem 3rem;
     text-decoration: underline;
   }
 `;

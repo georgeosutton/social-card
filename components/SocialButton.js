@@ -275,6 +275,9 @@ const StyledButton = styled(motion.button)`
   `}
 
   @media (max-width: 600px) {
+    width: 90%;
+  }
+  @media (max-width: 320px) {
     width: 100%;
   }
 
