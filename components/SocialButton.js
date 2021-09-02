@@ -77,7 +77,7 @@ const SocialButton = ({ social, printForLabour, theCampaignHouse }) => {
             variants={cardVariant}
             social={social}
           >
-            <div className="wrap" style={{ marginBottom: "0.5rem" }}>
+            <div className="wrap1">
               <StyledLogo>
                 <Image
                   priority={true}
@@ -93,7 +93,7 @@ const SocialButton = ({ social, printForLabour, theCampaignHouse }) => {
                 The Campaign House
               </a>
             </div>
-            <div className="wrap" style={{ marginTop: "0.5rem" }}>
+            <div className="wrap2">
               <StyledLogo>
                 <Image
                   priority={true}
@@ -159,11 +159,11 @@ const StyledButton = styled(motion.button)`
   `}
 
   @media (max-width: 600px) {
-    width: 90%;
+    width: 100%;
   }
   svg {
     margin-right: 1rem;
-    width: 28px;
+    width: 32px;
     fill: white;
   }
 `;
@@ -188,10 +188,22 @@ const StyledLinkCard = styled(motion.div)`
     flex-direction: column;
     border-radius: 30px;
   }
-  .wrap {
+  .wrap1,
+  .wrap2 {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .wrap1 {
+    @media (max-width: 600px) {
+      margin-bottom: 0.5rem;
+    }
+  }
+  .wrap2 {
+    @media (max-width: 600px) {
+      margin-top: 0.5rem;
+    }
   }
   a {
     display: block;
