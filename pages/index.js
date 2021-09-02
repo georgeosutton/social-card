@@ -99,11 +99,11 @@ const StyledSocial = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 0;
 `;
 
 const StyledCard = styled(motion.div)`
   width: 600px;
+  margin: 6rem 0;
   padding: 1rem;
   background-color: #ebebeb;
   box-shadow: rgba(220, 73, 40, 0.4) -5px 5px, rgba(220, 73, 40, 0.3) -10px 10px,
@@ -111,7 +111,7 @@ const StyledCard = styled(motion.div)`
     rgba(220, 73, 40, 0.05) -25px 25px;
   @media (max-width: 600px) {
     width: 90%;
-    margin-top: 0;
+    margin: 2rem 0;
   }
   h1 {
     margin: 3rem 0;

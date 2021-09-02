@@ -245,7 +245,7 @@ const StyledButton = styled(motion.button)`
   outline: none;
   border: none;
   padding: 1rem;
-  margin: 2rem 0;
+  margin: 1.8rem 0;
   color: white;
   font-weight: 500;
   cursor: pointer;
@@ -301,6 +301,7 @@ const StyledLinkCard = styled(motion.div)`
     else if (props.social == "Instagram") return "#c32aa3";
     else if (props.social == "Email") return "#3A5E7E";
     else if (props.social == "Website") return "#16697A";
+    else if (props.social == "Sales Pack") return "#EE964B";
   }};
   @media (max-width: 600px) {
     padding: 0.75;
