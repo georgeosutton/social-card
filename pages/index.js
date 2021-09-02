@@ -13,6 +13,13 @@ import SocialButton from "../components/SocialButton";
 const Home = () => {
   return (
     <StyledSocial layout>
+      <Head>
+        <title>Social Card - The Campaign House</title>
+        <meta
+          name="description"
+          content="Follow our socials and get in contact with us."
+        />
+      </Head>
       <AnimateSharedLayout>
         <StyledCard layout>
           <motion.h1 layout>Get in touch...</motion.h1>
@@ -45,7 +52,32 @@ const Home = () => {
               printForLabour={"https://www.instagram.com/labourprinters/"}
               theCampaignHouse={"https://www.instagram.com/thecampaignhouse/"}
             />
+            <SocialButton
+              social={"Website"}
+              printForLabour={"https://thecampaignhouse.co.uk/"}
+              theCampaignHouse={"https://printforlabour.co.uk/"}
+            />
+            <SocialButton
+              social={"Email"}
+              printForLabour={"mailto:hello@printforlabour.co.uk"}
+              theCampaignHouse={"mailto:hello@thecampaignhouse.co.uk"}
+            />
+            <SocialButton
+              social={"Sales Pack"}
+              printForLabour={
+                "https://www.canva.com/design/DAEirRoKs44/SxejTHK7h10_7L3F88yAQA/view?utm_content=DAEirRoKs44&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
+              }
+              theCampaignHouse={
+                "https://www.canva.com/design/DAEiremGL7g/yPyUN1ocJ849wbl_buu4Mg/view?utm_content=DAEiremGL7g&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
+              }
+            ></SocialButton>
           </StyledButtons>
+          <StyledFooter>
+            <a href="tel:01827 894 454">01827 894 454</a>
+            <a href="https://www.google.com/maps/place/The+Campaign+House/@52.5780994,-1.5516466,17z/data=!3m1!4b1!4m5!3m4!1s0x4870ab75bcfa910b:0x1728e0b1ad0a0530!8m2!3d52.5781069!4d-1.5494528">
+              33 Long Street, Atherstone, CV9 1AY
+            </a>
+          </StyledFooter>
         </StyledCard>
       </AnimateSharedLayout>
     </StyledSocial>
@@ -53,23 +85,25 @@ const Home = () => {
 };
 const StyledLayout = styled.div`
   display: flex;
-  flex-direction: column;
   height: 100%;
+  flex-direction: column;
+  .container {
+    display: flex;
+    flex: 1;
+  }
 `;
 
 const StyledSocial = styled(motion.div)`
+  width: 100%;
   background-color: #1a382c;
   display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
 `;
 
 const StyledCard = styled(motion.div)`
   width: 600px;
-  height: fit-content;
-  margin: 5rem 0 0 0;
   padding: 1rem;
   background-color: #ebebeb;
   box-shadow: rgba(220, 73, 40, 0.4) -5px 5px, rgba(220, 73, 40, 0.3) -10px 10px,
@@ -94,14 +128,26 @@ const StyledButtons = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 0 3rem 0;
-  @media (max-width: 600px) {
-    padding: 0 0 2rem 0;
+`;
+
+const StyledFooter = styled.footer`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem 0;
+  padding: 2rem 0;
+  a {
+    margin: 0.75rem 0;
+    text-decoration: underline;
   }
 `;
 
 Home.getLayout = function getLayout(Home) {
-  return <StyledLayout>{Home}</StyledLayout>;
+  return (
+    <StyledLayout>
+      <div className="container">{Home}</div>
+    </StyledLayout>
+  );
 };
 
 export default Home;

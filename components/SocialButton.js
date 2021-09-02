@@ -29,10 +29,120 @@ const SocialButton = ({ social, printForLabour, theCampaignHouse }) => {
     </svg>
   );
 
+  const emailSVG = (
+    <svg
+      version="1.1"
+      id="Capa_1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsxlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      viewBox="0 0 512 512"
+      style={{ enableBackground: "new 0 0 512 512" }}
+      xmlSpace="preserve"
+    >
+      <g>
+        <g>
+          <polygon points="339.392,258.624 512,367.744 512,144.896 		" />
+        </g>
+      </g>
+      <g>
+        <g>
+          <polygon points="0,144.896 0,367.744 172.608,258.624 		" />
+        </g>
+      </g>
+      <g>
+        <g>
+          <path d="M480,80H32C16.032,80,3.36,91.904,0.96,107.232L256,275.264l255.04-168.032C508.64,91.904,495.968,80,480,80z" />
+        </g>
+      </g>
+      <g>
+        <g>
+          <path
+            d="M310.08,277.952l-45.28,29.824c-2.688,1.76-5.728,2.624-8.8,2.624c-3.072,0-6.112-0.864-8.8-2.624l-45.28-29.856
+         L1.024,404.992C3.488,420.192,16.096,432,32,432h448c15.904,0,28.512-11.808,30.976-27.008L310.08,277.952z"
+          />
+        </g>
+      </g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+    </svg>
+  );
+
   const linkedinSVG = (
     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <title>LinkedIn</title>
       <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+    </svg>
+  );
+
+  const websiteSVG = (
+    <svg
+      version="1.1"
+      id="Capa_1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      viewBox="0 0 508 508"
+      style={{ enableBackground: "new 0 0 508 508" }}
+      xmlSpace="preserve"
+    >
+      <g>
+        <g>
+          <path
+            d="M254,0C146.7,0,0,81.1,0,254c0,168.5,141.1,254,254,254c193.7,0,254-169.7,254-254C508,129.6,412.8,0,254,0z M195.1,23.9
+         c-26.5,22.6-48.5,60-62.7,106.4c-18.4-10.9-35.3-24.4-50.3-40.1C113.1,57.7,152.3,34.9,195.1,23.9z M71.2,102.4
+         c16.8,17.5,35.9,32.4,56.7,44.2c-7.8,30.3-12.4,63.9-13,99.2H16.6C18.4,193.1,37.6,142.8,71.2,102.4z M71.2,405.6
+         c-33.7-40.4-52.8-90.7-54.6-143.4h98.3c0.6,35.4,5.2,68.9,13,99.2C107.2,373.3,88.1,388.1,71.2,405.6z M82.1,417.9
+         c15-15.7,31.9-29.2,50.3-40.1c14.2,46.3,36.2,83.8,62.7,106.4C152.3,473.1,113.1,450.3,82.1,417.9z M245.8,491
+         c-42.6-5.4-79.3-53-99.1-121.2c30.6-15.5,64.4-24.2,99.1-25.5V491z M245.8,328c-36.2,1.2-71.4,10.1-103.3,25.7
+         c-6.7-28-10.7-58.9-11.3-91.5h114.6V328z M245.8,245.8H131.2c0.6-32.6,4.6-63.5,11.3-91.5c32,15.6,67.2,24.5,103.3,25.7V245.8z
+          M245.8,163.7c-34.8-1.2-68.5-10-99.1-25.5C166.5,69.9,203.2,22.4,245.8,17V163.7z M436.8,102.4c33.6,40.4,52.8,90.7,54.6,143.4
+         h-98.2c-0.6-35.4-5.2-68.9-13-99.2C400.9,134.7,420,119.9,436.8,102.4z M425.9,90.1c-15,15.7-31.9,29.2-50.3,40.1
+         c-14.2-46.3-36.2-83.7-62.7-106.4C355.7,34.9,394.9,57.7,425.9,90.1z M262.2,17c42.6,5.4,79.3,53,99.1,121.2
+         c-30.6,15.5-64.3,24.2-99.1,25.5V17z M262.2,180c36.2-1.2,71.4-10.1,103.3-25.7c6.7,28,10.7,58.9,11.3,91.5H262.2V180z
+          M262.2,262.2h114.6c-0.6,32.6-4.6,63.5-11.3,91.5c-31.9-15.7-67.1-24.6-103.3-25.7V262.2z M262.2,491V344.3
+         c34.8,1.2,68.5,10,99.1,25.5C341.5,438.1,304.8,485.6,262.2,491z M312.9,484.1c26.5-22.6,48.5-60,62.7-106.4
+         c18.4,10.9,35.3,24.4,50.3,40.1C394.9,450.3,355.7,473.1,312.9,484.1z M436.8,405.6c-16.8-17.5-35.9-32.3-56.6-44.2
+         c7.8-30.3,12.4-63.9,13-99.2h98.2C489.6,314.9,470.4,365.2,436.8,405.6z"
+          />
+        </g>
+      </g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+    </svg>
+  );
+
+  const salesSVG = (
+    <svg viewBox="0 0 40 40">
+      <path d="M24.5,13.6V5.8c0.2,0.2,0.4,0.3,0.6,0.5l6.8,6.8c0.2,0.2,0.3,0.4,0.5,0.6L24.5,13.6L24.5,13.6z M22.3,14.2 c0,0.4,0.2,0.8,0.5,1.1c0.3,0.3,0.7,0.5,1.1,0.5h9v17.5c0,0.4-0.2,0.8-0.5,1.1c-0.3,0.3-0.7,0.5-1.1,0.5H9.1c-0.4,0-0.8-0.2-1.1-0.5 c-0.3-0.3-0.5-0.7-0.5-1.1V6.7c0-0.4,0.2-0.8,0.5-1.1c0.3-0.3,0.7-0.5,1.1-0.5h13.3L22.3,14.2L22.3,14.2z"></path>
     </svg>
   );
 
@@ -66,6 +176,9 @@ const SocialButton = ({ social, printForLabour, theCampaignHouse }) => {
         {social == "Twitter" && twitterSVG}
         {social == "Linkedin" && linkedinSVG}
         {social == "Instagram" && instagramSVG}
+        {social == "Email" && emailSVG}
+        {social == "Website" && websiteSVG}
+        {social == "Sales Pack" && salesSVG}
         {social}
       </StyledButton>
       <AnimatePresence>
@@ -105,6 +218,7 @@ const SocialButton = ({ social, printForLabour, theCampaignHouse }) => {
                   layout="responsive"
                 />
               </StyledLogo>
+
               <a style={{ color: "#e4003b" }} href={printForLabour}>
                 Print For Labour
               </a>
@@ -117,7 +231,6 @@ const SocialButton = ({ social, printForLabour, theCampaignHouse }) => {
 };
 const StyledContainer = styled(motion.div)`
   display: flex;
-  height: fit-content;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -128,7 +241,7 @@ const StyledButton = styled(motion.button)`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 70%;
   outline: none;
   border: none;
   padding: 1rem;
@@ -143,6 +256,9 @@ const StyledButton = styled(motion.button)`
     if (props.social == "Facebook") return "#1877f2";
     else if (props.social == "Twitter") return "#1da1f2";
     else if (props.social == "Linkedin") return "#0a66c2";
+    else if (props.social == "Email") return "#3A5E7E";
+    else if (props.social == "Website") return "#16697A";
+    else if (props.social == "Sales Pack") return "#EE964B";
   }};
   ${(props) =>
     props.social == "Instagram" &&
@@ -161,6 +277,7 @@ const StyledButton = styled(motion.button)`
   @media (max-width: 600px) {
     width: 100%;
   }
+
   svg {
     margin-right: 1rem;
     width: 32px;
@@ -182,6 +299,8 @@ const StyledLinkCard = styled(motion.div)`
     else if (props.social == "Twitter") return "#1da1f2";
     else if (props.social == "Linkedin") return "#0a66c2";
     else if (props.social == "Instagram") return "#c32aa3";
+    else if (props.social == "Email") return "#3A5E7E";
+    else if (props.social == "Website") return "#16697A";
   }};
   @media (max-width: 600px) {
     padding: 0.75;
