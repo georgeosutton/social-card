@@ -5,9 +5,6 @@ import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { AnimateSharedLayout, motion } from "framer-motion";
 
-import Image from "next/image";
-import Link from "next/link";
-
 import SocialButton from "../components/SocialButton";
 
 const Home = () => {
@@ -20,7 +17,7 @@ const Home = () => {
   }, []);
 
   return (
-    <StyledSocial layout>
+    <StyledSocial>
       <Head>
         <link
           rel="apple-touch-icon"
@@ -52,9 +49,11 @@ const Home = () => {
       <AnimateSharedLayout>
         <StyledCard layout>
           <div ref={myRef} className="scroll"></div>
-          <motion.h1 layout>Get in touch...</motion.h1>
+          <div>
+            <motion.h1 layout>Get in touch...</motion.h1>
+          </div>
 
-          <StyledButtons layout>
+          <StyledButtons>
             <SocialButton
               theCampaignHouse={"https://www.facebook.com/thecampaignhouse"}
               printForLabour={"https://www.facebook.com/LabourPrinters"}
@@ -132,6 +131,8 @@ const StyledSocial = styled(motion.div)`
 `;
 
 const StyledCard = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
   width: 600px;
   margin: 6rem 0;
   padding: 1rem;
@@ -145,6 +146,7 @@ const StyledCard = styled(motion.div)`
     box-shadow: none;
   }
   h1 {
+    height: fit-content;
     margin: 3rem 0;
     font-size: 5.2rem;
     color: #0b2433;

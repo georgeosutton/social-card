@@ -190,7 +190,7 @@ const SocialButton = ({ social, printForLabour, theCampaignHouse }) => {
             variants={cardVariant}
             social={social}
           >
-            <div className="wrap1">
+            <motion.div layout className="wrap1">
               <StyledLogo>
                 <Image
                   priority={true}
@@ -209,8 +209,8 @@ const SocialButton = ({ social, printForLabour, theCampaignHouse }) => {
               >
                 The Campaign House
               </a>
-            </div>
-            <div className="wrap2">
+            </motion.div>
+            <motion.div layout className="wrap2">
               <StyledLogo>
                 <Image
                   priority={true}
@@ -230,7 +230,7 @@ const SocialButton = ({ social, printForLabour, theCampaignHouse }) => {
               >
                 Print For Labour
               </a>
-            </div>
+            </motion.div>
           </StyledLinkCard>
         )}
       </AnimatePresence>
