@@ -167,7 +167,11 @@ const SocialButton = ({ social, printForLabour, theCampaignHouse }) => {
 
   return (
     <StyledContainer layout>
-      <StyledButton social={social} onClick={() => setIsSelected(!isSelected)}>
+      <StyledButton
+        layout
+        social={social}
+        onClick={() => setIsSelected(!isSelected)}
+      >
         {social == "Facebook" && facebookSVG}
         {social == "Twitter" && twitterSVG}
         {social == "Linkedin" && linkedinSVG}
