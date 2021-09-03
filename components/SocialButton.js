@@ -313,7 +313,7 @@ const StyledLinkCard = styled(motion.div)`
     else if (props.social == "Sales Pack") return "#EE964B";
   }};
   @media (max-width: 600px) {
-    padding: 0.75rem;
+    padding: 0.75;
     flex-direction: column;
     border-radius: 30px;
   }
