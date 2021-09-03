@@ -320,13 +320,13 @@ const StyledLinkCard = styled(motion.div)`
   .link {
     display: inline-block;
     cursor: pointer;
-    margin: 0 2rem 0 0.75rem;
+    margin: 0 1rem 0 0.95rem;
     font-weight: bold;
     height: 100%;
   }
   .wrap1,
   .wrap2 {
-    padding: 1.4rem;
+    padding: 1.4rem 0.75rem;
     display: flex;
     justify-content: center;
     align-items: center;
