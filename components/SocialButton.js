@@ -167,11 +167,7 @@ const SocialButton = ({ social, printForLabour, theCampaignHouse }) => {
 
   return (
     <StyledContainer layout>
-      <StyledButton
-        layout
-        social={social}
-        onClick={() => setIsSelected(!isSelected)}
-      >
+      <StyledButton social={social} onClick={() => setIsSelected(!isSelected)}>
         {social == "Facebook" && facebookSVG}
         {social == "Twitter" && twitterSVG}
         {social == "Linkedin" && linkedinSVG}
@@ -195,11 +191,10 @@ const SocialButton = ({ social, printForLabour, theCampaignHouse }) => {
                 <Image
                   priority={true}
                   src="/TchLogo.png"
-                  alt="Logo"
-                  title="Home"
-                  width={1080}
-                  height={1080}
-                  layout="responsive"
+                  alt="The Campaign House Logo"
+                  width={32}
+                  height={32}
+                  layout="fixed"
                 />
               </StyledLogo>
               <a
@@ -216,11 +211,10 @@ const SocialButton = ({ social, printForLabour, theCampaignHouse }) => {
                 <Image
                   priority={true}
                   src="/PflLogo.png"
-                  alt="Logo"
-                  title="Home"
-                  width={1080}
-                  height={1080}
-                  layout="responsive"
+                  alt="Print for Labour Logo"
+                  width={32}
+                  height={32}
+                  layout="fixed"
                 />
               </StyledLogo>
 
