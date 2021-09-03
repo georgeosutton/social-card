@@ -190,46 +190,49 @@ const SocialButton = ({ social, printForLabour, theCampaignHouse }) => {
             variants={cardVariant}
             social={social}
           >
-            <a
-              className="link"
-              rel="noopener noreferrer"
-              target="_blank"
-              style={{ color: "#1A382C" }}
-              href={theCampaignHouse}
-            >
-              <div className="wrap1">
+            <div className="wrap1">
+              <StyledLogo>
                 <Image
-                  className="image"
                   priority={true}
                   src="/TchLogo.png"
-                  alt="The Campaign House Logo"
-                  width={34}
-                  height={34}
-                  layout="fixed"
+                  alt="Logo"
+                  title="Home"
+                  width={1080}
+                  height={1080}
+                  layout="responsive"
                 />
-                <span>The Campaign House</span>
-              </div>
-            </a>
-            <a
-              className="link"
-              rel="noopener noreferrer"
-              target="_blank"
-              style={{ color: "#e4003b" }}
-              href={printForLabour}
-            >
-              <div className="wrap2">
+              </StyledLogo>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                style={{ color: "#1A382C" }}
+                href={theCampaignHouse}
+              >
+                The Campaign House
+              </a>
+            </div>
+            <div className="wrap2">
+              <StyledLogo>
                 <Image
-                  className="image"
                   priority={true}
                   src="/PflLogo.png"
-                  alt="Print for Labour logo"
-                  width={34}
-                  height={34}
-                  layout="fixed"
+                  alt="Logo"
+                  title="Home"
+                  width={1080}
+                  height={1080}
+                  layout="responsive"
                 />
-                <span>Print For Labour</span>
-              </div>
-            </a>
+              </StyledLogo>
+
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                style={{ color: "#e4003b" }}
+                href={printForLabour}
+              >
+                Print For Labour
+              </a>
+            </div>
           </StyledLinkCard>
         )}
       </AnimatePresence>
@@ -302,6 +305,7 @@ const StyledLinkCard = styled(motion.div)`
   align-items: center;
   width: fit-content;
   border-radius: 9999px;
+  padding: 1.4rem;
   border: 2px solid;
   border-color: ${(props) => {
     if (props.social == "Facebook") return "#1877f2";
@@ -317,22 +321,11 @@ const StyledLinkCard = styled(motion.div)`
     flex-direction: column;
     border-radius: 30px;
   }
-  .link {
-    display: inline-block;
-    cursor: pointer;
-    margin: 0 2rem 0 0.75rem;
-    font-weight: bold;
-    height: 100%;
-  }
   .wrap1,
   .wrap2 {
-    padding: 1.4rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    span {
-      margin-left: 0.5rem;
-    }
   }
 
   .wrap1 {
@@ -345,18 +338,20 @@ const StyledLinkCard = styled(motion.div)`
       margin-top: 0.5rem;
     }
   }
-  .image {
-    width: 32px !important;
-    height: 32px !important;
-    min-width: 32px !important;
-    max-width: 32px !important;
-    min-height: 32px !important;
-    max-height: 32px !important;
+  a {
+    display: block;
+    color: black;
+    cursor: pointer;
+    margin: 0 2rem 0 0.75rem;
+    font-weight: bold;
   }
-
   a:hover {
     text-decoration: underline;
   }
 `;
 
+const StyledLogo = styled.div`
+  width: 32px;
+  height: 32px;
+`;
 export default SocialButton;
