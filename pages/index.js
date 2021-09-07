@@ -17,43 +17,43 @@ const Home = () => {
   }, []);
 
   return (
-    <StyledSocial>
-      <Head>
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
-        <title>Social Card - The Campaign House</title>
-        <meta
-          name="description"
-          content="Follow our socials and get in contact with us."
-        />
-      </Head>
-      <AnimateSharedLayout>
+    <AnimateSharedLayout>
+      <StyledSocial layout>
+        <Head>
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+          />
+          <link rel="manifest" href="/site.webmanifest" />
+          <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+          <meta name="msapplication-TileColor" content="#da532c" />
+          <meta name="theme-color" content="#ffffff" />
+          <title>Social Card - The Campaign House</title>
+          <meta
+            name="description"
+            content="Follow our socials and get in contact with us."
+          />
+        </Head>
+
         <StyledCard layout>
           <div ref={myRef} className="scroll"></div>
-          <div>
-            <motion.h1 layout>Get in touch...</motion.h1>
-          </div>
 
-          <StyledButtons>
+          <motion.h1 layout>Get in touch...</motion.h1>
+
+          <StyledButtons layout>
             <SocialButton
               theCampaignHouse={"https://www.facebook.com/thecampaignhouse"}
               printForLabour={"https://www.facebook.com/LabourPrinters"}
@@ -101,15 +101,15 @@ const Home = () => {
               }
             ></SocialButton>
           </StyledButtons>
-          <StyledFooter>
+          <StyledFooter layout>
             <a href="tel:01827 894 454">01827 894 454</a>
             <a href="https://www.google.com/maps/place/The+Campaign+House/@52.5780994,-1.5516466,17z/data=!3m1!4b1!4m5!3m4!1s0x4870ab75bcfa910b:0x1728e0b1ad0a0530!8m2!3d52.5781069!4d-1.5494528">
               33 Long Street, Atherstone, CV9 1AY
             </a>
           </StyledFooter>
         </StyledCard>
-      </AnimateSharedLayout>
-    </StyledSocial>
+      </StyledSocial>
+    </AnimateSharedLayout>
   );
 };
 const StyledLayout = styled.div`
@@ -146,11 +146,10 @@ const StyledCard = styled(motion.div)`
     box-shadow: none;
   }
   h1 {
-    height: fit-content;
-    margin: 3rem 0;
+    margin: 3rem auto;
     font-size: 5.2rem;
     color: #0b2433;
-    text-align: center;
+
     @media (max-width: 600px) {
       font-size: 3.8rem;
       margin: 2rem 0;
@@ -168,13 +167,13 @@ const StyledCard = styled(motion.div)`
     }
   }
 `;
-const StyledButtons = styled.div`
+const StyledButtons = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-const StyledFooter = styled.footer`
+const StyledFooter = styled(motion.footer)`
   display: flex;
   flex-direction: column;
   align-items: center;
