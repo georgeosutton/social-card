@@ -15,7 +15,7 @@ import {
   salesSVG,
 } from "../assets/svg";
 
-const SocialButton = ({ social, printForLabour, theCampaignHouse }) => {
+const SocialButton = ({ social, labour, theCampaignHouse }) => {
   const [isSelected, setIsSelected] = useState(false);
 
   const cardVariant = {
@@ -86,7 +86,7 @@ const SocialButton = ({ social, printForLabour, theCampaignHouse }) => {
               <StyledLogo>
                 <Image
                   priority={true}
-                  src="/PflLogo.png"
+                  src="/andlabour-logo.png"
                   alt="Print for Labour Logo"
                   width={32}
                   height={32}
@@ -97,10 +97,10 @@ const SocialButton = ({ social, printForLabour, theCampaignHouse }) => {
               <a
                 rel="noopener noreferrer"
                 target="_blank"
-                style={{ color: "#e4003b" }}
-                href={printForLabour}
+                style={{ color: "#e61c5d" }}
+                href={labour}
               >
-                Print For Labour
+                &labour
               </a>
             </div>
           </StyledLinkCard>

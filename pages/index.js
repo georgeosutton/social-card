@@ -56,13 +56,13 @@ const Home = () => {
           <StyledButtons layout>
             <SocialButton
               theCampaignHouse={"https://www.facebook.com/thecampaignhouse"}
-              printForLabour={"https://www.facebook.com/LabourPrinters"}
+              labour={"https://www.facebook.com/andlabour"}
               social={"Facebook"}
             />
 
             <SocialButton
               theCampaignHouse={"https://twitter.com/CampaignHouse_"}
-              printForLabour={"https://twitter.com/LabourPrinters"}
+              labour={"https://twitter.com/andlabour_"}
               social="Twitter"
             />
 
@@ -70,30 +70,28 @@ const Home = () => {
               theCampaignHouse={
                 "https://www.linkedin.com/company/thecampaignhouse"
               }
-              printForLabour={
-                "https://www.linkedin.com/company/thecampaignhouse"
-              }
+              labour={"https://www.linkedin.com/company/thecampaignhouse"}
               social={"Linkedin"}
             />
 
             <SocialButton
               social={"Instagram"}
-              printForLabour={"https://www.instagram.com/labourprinters/"}
+              labour={"https://www.instagram.com/andlabour/"}
               theCampaignHouse={"https://www.instagram.com/thecampaignhouse/"}
             />
             <SocialButton
               social={"Website"}
               theCampaignHouse={"https://thecampaignhouse.co.uk/"}
-              printForLabour={"https://printforlabour.co.uk/"}
+              labour={"https://andlabour.co.uk"}
             />
             <SocialButton
               social={"Email"}
-              printForLabour={"mailto:hello@printforlabour.co.uk"}
+              labour={"mailto:hello@andlabour.co.uk"}
               theCampaignHouse={"mailto:hello@thecampaignhouse.co.uk"}
             />
             <SocialButton
               social={"Sales Pack"}
-              printForLabour={
+              labour={
                 "https://www.canva.com/design/DAEirRoKs44/SxejTHK7h10_7L3F88yAQA/view?utm_content=DAEirRoKs44&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
               }
               theCampaignHouse={
@@ -146,6 +144,7 @@ const StyledCard = styled(motion.div)`
     box-shadow: none;
   }
   h1 {
+    display: inline-block;
     margin: 3rem auto;
     font-size: 5.2rem;
     color: #0b2433;
